@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql:5.7.22
+    restart: always
+    environment:
+    - MYSQL_ROOT_PASSWORD=testApp
+    - MYSQL_DATABASE=testApp
+    - MYSQL_USER=testApp
+    - MYSQL_PASSWORD=testApp
+  python:
+    build: python_server
+    volumes:
+    - .:/mysite
+    command: ./python_server/entry.sh
+  web:
+    image: nginx:alpine
+    depends_on:
+    - python
