@@ -1,5 +1,12 @@
 # django-server
 
+## Build and Run
+
+```
+$ docker-compose -f docker-compose.yml -f docker-compose.dev.yml build
+$ docker-compose -f docker-compose.yml -f docker-compose.dev.yml up web
+```
+
 
 ## reference
 - https://qiita.com/hayatetabata/items/7b51acedeb3d4e84dd12
