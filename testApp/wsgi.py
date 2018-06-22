@@ -1,5 +1,5 @@
 """
-WSGI config for mysite project.
+WSGI config for testApp project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import pymysql
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testApp.settings")
 
 pymysql.install_as_MySQLdb()
 

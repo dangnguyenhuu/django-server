@@ -12,7 +12,7 @@ services:
   python:
     build: python_server
     volumes:
-    - .:/mysite
+    - .:/server
     command: ./python_server/entry.sh
   web:
     image: nginx:alpine
